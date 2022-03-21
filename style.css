@@ -1,9 +1,17 @@
+/* @font-face {
+  font-family: 'Norse-Bold';
+  src: url(fonts/Norse-Bold.otf) format("OpenType");
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto+Slab:wght@400&display=swap');
+
 :root {
   --logo-clr: #ffff;
   --main-bg-clr: #f9fafb;
   --p-font-clr: #0b0b0b;
   --label-font-clr: #2b3442;
-  --input-bdr-clr: #eff0f2;
+  --input-bdr-clr: #dedfe0;
   --active-clr: #476dda;
   --button-clr: #596d48;
   --error-clr: #c84c4c;
@@ -15,6 +23,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* outline: 1px solid red; */
 }
 
 html {
@@ -23,5 +33,151 @@ html {
 }
 
 body {
+  height: 100vh;
   font-size: 1.6rem;
+}
+
+h1 {
+  font-family: 'Palette Mosaic', cursive;
+  /* font-family: 'Norse-Bold', serif; */
+}
+
+p,
+legend {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+aside {
+  height: 100%;
+  width: 110rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url(images/coffee.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+aside .logo-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 10rem;
+  margin-top: 10rem;
+}
+
+aside ul {
+  width: 100%;
+  margin-top: auto;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*========
+  article
+==========*/
+article {
+  width: 168.5rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+header {
+  padding: 4rem 7rem 0 4rem;
+
+  align-self: flex-start;
+  background-color: var(--main-bg-clr);
+}
+
+header p:first-child {
+  margin-top: 12rem;
+}
+
+header p:last-child {
+  margin: 3rem 0 6rem;
+}
+
+form {
+  height: 30rem;
+  padding: 2rem 4rem 4rem;
+
+  gap: 2rem;
+}
+
+fieldset {
+  border: none;
+
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+legend {
+  padding-bottom: 2rem;
+}
+
+button {
+  height: 4rem;
+  max-width: 20rem;
+}
+
+fieldset ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+fieldset ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset li {
+  margin-right: 7.5rem;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', serif;
+}
+
+input {
+  width: 24.5rem;
+  height: 3rem;
+
+  border: 0.1rem solid var(--input-bdr-clr);
+  border-radius: 0.5rem
 }
