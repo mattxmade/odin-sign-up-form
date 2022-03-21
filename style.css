@@ -1,0 +1,27 @@
+:root {
+  --logo-clr: #ffff;
+  --main-bg-clr: #f9fafb;
+  --p-font-clr: #0b0b0b;
+  --label-font-clr: #2b3442;
+  --input-bdr-clr: #eff0f2;
+  --active-clr: #476dda;
+  --button-clr: #596d48;
+  --error-clr: #c84c4c;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 625.5%;
+  min-height: 100vh;
+}
+
+body {
+  font-size: 1.6rem;
+}
