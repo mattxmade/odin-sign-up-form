@@ -35,6 +35,8 @@ html {
 body {
   height: 100vh;
   font-size: 1.6rem;
+
+  background-color: var(--main-bg-clr);
 }
 
 h1 {
@@ -69,7 +71,7 @@ main {
 
 aside {
   height: 100%;
-  width: 110rem;
+  width: 99rem;
 
   display: flex;
   align-items: center;
@@ -104,18 +106,18 @@ aside ul {
   article
 ==========*/
 article {
+  height: 100%;
   width: 168.5rem;
   display: flex;
   flex-direction: column;
 
-  align-items: center;
+  justify-content: center;
 }
 
 header {
-  padding: 4rem 7rem 0 4rem;
+  padding: 3rem 7rem 0 4rem;
 
   align-self: flex-start;
-  background-color: var(--main-bg-clr);
 }
 
 header p:first-child {
@@ -127,27 +129,51 @@ header p:last-child {
 }
 
 form {
-  height: 30rem;
-  padding: 2rem 4rem 4rem;
+  height: 100%;
 
-  gap: 2rem;
+  padding: 2rem 0 0rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
 fieldset {
+  width: 100%;
   border: none;
 
   gap: 3rem;
   display: flex;
   flex-direction: column;
+
+  padding: 0 4rem 3rem;
+
+  z-index: 1;
+  position: relative;
+
+  background-color: white;
+  box-shadow: 0 1rem 1rem -0.7rem rgb(194, 194, 194);
 }
 
 legend {
-  padding-bottom: 2rem;
+  padding: 2rem 0;
+  background-color: white;
+  width: 100%;
 }
 
 button {
-  height: 4rem;
-  max-width: 20rem;
+  height: 4.7rem;
+  width: 22rem;
+
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--button-clr);
+
+  cursor: pointer;
+
+  color: white;
+  font-size: 1.8rem;
+  font-family: 'Roboto Slab', serif;
+  box-shadow: 0 1rem 0.5rem -0.7rem rgb(155, 155, 155);
 }
 
 fieldset ul {
@@ -164,13 +190,16 @@ fieldset ul li {
 
 fieldset li {
   margin-right: 7.5rem;
+  margin-bottom: 1.05rem;
 }
 
 label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
+  padding-bottom: 0.5rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  color: var(--label-font-clr);
   font-family: 'Roboto Slab', serif;
 }
 
@@ -179,5 +208,34 @@ input {
   height: 3rem;
 
   border: 0.1rem solid var(--input-bdr-clr);
-  border-radius: 0.5rem
+  border-radius: 0.5rem;
+
+  padding: 1rem;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+input:focus-visible {
+  outline: 0.1rem solid var(--active-clr);
+  box-shadow: 0 0rem 0.5rem 0.2rem rgb(194, 194, 194);
+}
+
+input:invalid {
+  color: var(--error-clr);
+}
+
+.form-end-cont {
+  width: 100%;
+  padding: 3rem 4rem 0;
+}
+
+.info {
+  margin-top: 2.2rem;
+  font-size: 1.6rem;
+}
+
+a {
+  cursor: pointer;
+  color: var(--button-clr);
 }
