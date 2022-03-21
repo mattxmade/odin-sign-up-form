@@ -31,11 +31,10 @@
           <p>You <em>know</em> you want to!</p>
         </header>
 
-        <form action="" method="">
+        <form id="signup" action="" method="">
           <fieldset>
-            <legend>Let's do this!</legend>
-            
             <ul>
+              <legend>Let's do this!</legend>
               <li>
                 <label for="first">first name</label>
                 <input name="first" type="text" required>
@@ -61,10 +60,14 @@
                 <input name="confirm" type="password" required>
               </li>
             </ul>
-            <button type="submit">Create Account</button>
+            
           </fieldset>
 
-          <p class="info">Already have an account? <a>Log in</a></p>
+          <div class="form-end-cont">
+            <button form="signup" type="submit">Create Account</button>
+            <p class="info">Already have an account? <a>Log in</a></p>
+          </div>
+
         </form>
 
       </article>
