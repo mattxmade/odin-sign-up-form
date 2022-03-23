@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="style.css">
   <title>Sign-up form</title>
 </head>
@@ -13,51 +14,67 @@
     <main>
       <aside>
         <div class="logo-container">
-          <h1>ODIN</h1>
+          <div>
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h1>Arcade City
+            <p class="subheading">Classic games on demand</p>
+          </h1>
+          
+          
         </div>
 
-        <ul>
-          <li>twitter</li>
-          <li>mattxmade</li>
-          <li>github</li>
+        <ul class="social-links">
+          <li><a href="https://www.github.com/mattxmade" target="_blank"><i class="fab fa-github-alt"></a></i></li>
+          <li><p class="author">mattxmade</p></li>
+          <li><a href="https://www.twitter.com/mattxmade" target="_blank"><i class="fab fa-twitter"></i></a></li>
         </ul>
       </aside>
       
       <article>
         <header>
-          <p>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams.</p>
+          <ul>
+            <li><i class="fas fa-ghost"></i></li>
+            <li><i class="fab fa-playstation"></i></li>
+            <li><i class="fas fa-gamepad"></i></li>
+            <li><i class="fab fa-xbox"></i></li>
+            <li><i class="fab fa-steam"></i></li>
+          </ul>
+          <p class="usp-intro">All-time classic and best retro video games all in one place! Stream all your favourites on demand for just $5 per month.</p>
+          <p>Ready to play?</p>
           <p>Sign-up now to get started.</p>
-          </p>
-          <p>You <em>know</em> you want to!</p>
         </header>
 
-        <form id="signup" action="" method="">
+        <form class="scroll-target" id="signup" action="" method="">
           <fieldset>
             <ul>
-              <legend>Let's do this!</legend>
-              <li>
+              <legend id="sign-up"><a href="#sign-up">Let's do this!</a></legend>
+              <li class="first-cont">
                 <label for="first">first name</label>
-                <input name="first" type="text" required>
+                <input name="first" type="text" required autocomplete="given-name">
               </li>
-              <li>
+              <li class="last-cont">
                 <label for="last">last name</label>
-                <input name="last" type="text" required>
+                <input name="last" type="text" required autocomplete="family-name">
               </li>
-              <li>
+              <li class="email-cont">
                 <label for="email">email</label>
-                <input name="email" type="email" required>
+                <input name="email" type="email" required autocomplete="email">
               </li>
-              <li>
+              <li class="tel-cont">
                 <label for="tel">phone number</label>
-                <input name="tel" type="tel" required>
+                <input name="tel" type="tel" required autocomplete="tel" minlength="11" maxlength="11">
               </li>
-              <li>
-                <label for="">password</label>
-                <input name="password" type="password" required>
+              <li class="password-cont">
+                <label for="password">password <i class="fas fa-question-circle js-info"></i></label>
+                <input id="_password" name="password" type="password" autocomplete="new-password" required maxlength="16">
+                <p class="strength-message"></p>
+
               </li>
-              <li>
-                <label for="">confirm password</label>
-                <input name="confirm" type="password" required>
+              <li class="confirm-cont">
+                <label for="confirm">confirm password</label>
+                <input id="_confirm" name="confirm" type="password" autocomplete="new-password" required>
+                <p class="error-message"></p>
               </li>
             </ul>
             
@@ -72,8 +89,16 @@
 
       </article>
 
+      <dialog class="modal" id="modal">
+        <h2>Password helper</h2>
+        <p>Length: min 8 | max 18</p>
+        <p>Re-enter password to confirm</p>
+        <i class="fas fa-window-close js-close-modal"></i>
+      </dialog>
+
     </main>
   </div>
   
 </body>
+<script src="script.js"></script>
 </html>
